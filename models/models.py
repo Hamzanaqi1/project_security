@@ -9,6 +9,26 @@ from odoo.exceptions import UserError, AccessError, ValidationError, RedirectWar
 class project_security(models.Model):
     _inherit = 'project.task'
     def write(self,vals):
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
+        print(' write(self,val write(self,val write(self,val')
         res= super(project_security, self).write(vals)
         if(self.env.user.has_group('project_security.group_5')):
             if(self.stage_name not in ['Esperando Pasta','Pasta','Fondo y Decorado','Empaque','Enviada']):
