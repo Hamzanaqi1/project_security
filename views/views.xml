@@ -2,7 +2,7 @@
   <data>
 
     <record id="group_5" model="res.groups">
-      <field name="field_name">field_value</field>
+      <field name="name">Group A</field>
     </record>
     <record id = "rule_5" model = "ir.rule"> 
       <field name = "name"> User Can Only See Five Columns </field> 
