@@ -1,12 +1,21 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api,_
 
+from odoo.exceptions import UserError, AccessError, ValidationError, RedirectWarning
 
 
 
 class project_security(models.Model):
     _inherit = 'project.task'
+    def write(self,vals):
+        res= super(project_security, self).write(vals)
+        if(self.env.user.has_group('project_security.group_5')):
+            if(self.stage_name not in ['Esperando Pasta','Pasta','Fondo y Decorado','Empaque','Enviada']):
+                raise UserError(_("Sorry you do not have access to modify this record."))
+                
+
+        
     stage_name=fields.Char(compute='_compute_stage_name',store=True)
     @api.depends('stage_id')
     def _compute_stage_name(self):
