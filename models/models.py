@@ -13,6 +13,7 @@ class project_security(models.Model):
         if(self.env.user.has_group('project_security.group_5')):
             if(self.stage_name not in ['Esperando Pasta','Pasta','Fondo y Decorado','Empaque','Enviada']):
                 raise UserError(_("Sorry you do not have access to modify this record."))
+        return res
                 
 
         
