@@ -8,6 +8,7 @@ from odoo.exceptions import UserError, AccessError, ValidationError, RedirectWar
 
 class project_security(models.Model):
     _inherit = 'project.task'
+    aaa=fields.Char()
     def write(self,vals):
         print(' write(self,val write(self,val write(self,val')
         print(' write(self,val write(self,val write(self,val')
